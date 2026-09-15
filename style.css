@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #4aa9e8;
+    --blue-dark: #2388ca;
+    --blue-light: #eaf7ff;
+    --text: #263746;
+    --text-light: #71808c;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.55), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.4), transparent 35%),
+        linear-gradient(135deg, #dff3ff, #b9e4fa);
+
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+
+    padding: 48px 42px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(44, 130, 180, 0.16),
+        0 4px 12px rgba(44, 130, 180, 0.08);
+}
+
+.logo {
+    color: var(--blue-dark);
+
+    font-size: 34px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.line {
+    width: 48px;
+    height: 4px;
+
+    background: var(--blue);
+
+    border-radius: 20px;
+
+    margin: 17px auto 30px;
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+    color: #314555;
+}
+
+.message {
+    font-size: 15px;
+    line-height: 2.1;
+
+    color: var(--text-light);
+
+    margin-bottom: 30px;
+}
+
+.telegram-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: 12px;
+
+    background: var(--blue);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 7px 18px rgba(74, 169, 232, 0.28);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.telegram-button:hover {
+    background: var(--blue-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 22px rgba(74, 169, 232, 0.35);
+}
+
+.telegram-icon {
+    font-size: 15px;
+
+    display: inline-flex;
+
+    transform: rotate(-15deg);
+}
+
+.footer {
+    margin-top: 27px;
+
+    color: #a2adb5;
+
+    font-size: 12px;
+    direction: ltr;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 38px 24px 30px;
+        border-radius: 18px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .message {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .telegram-button {
+        width: 100%;
+    }
+}
